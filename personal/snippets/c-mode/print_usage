@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: Print usage
+# key: usage_
+# --
+void print_usage(char *exe_name)
+{
+  fprintf(stderr,
+          "Usage: %s $0\n",
+          basename(exe_name));
+}
