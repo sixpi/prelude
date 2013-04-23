@@ -1,4 +1,4 @@
-;;; bing-web.el --- Configuration for web development
+;;; bing-web.el --- My configurations for web development modes
 
 ;;; Code:
 (prelude-ensure-module-deps '(php-mode apache-mode))

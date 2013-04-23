@@ -1,4 +1,4 @@
-;;; bing-misc.el --- Misc configurations to be applied on all machines
+;;; bing-misc.el --- My miscellaneous configurations
 
 ;;; Commentary:
 

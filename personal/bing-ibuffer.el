@@ -1,4 +1,4 @@
-;;; bing-ibuffer.el --- Personal settings for ibuffer in prelude
+;;; bing-ibuffer.el --- My configurations for ibuffer
 
 ;;; Code:
 (prelude-ensure-module-deps '(ibuffer-vc))

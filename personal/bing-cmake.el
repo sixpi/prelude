@@ -1,4 +1,4 @@
-;;; bing-cmake.el --- cmake-mode config
+;;; bing-cmake.el --- My configurations for cmake
 
 ;;; Code:
 (require 'cmake-mode)
