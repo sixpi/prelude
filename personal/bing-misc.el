@@ -16,6 +16,8 @@
 (global-linum-mode 1)
 (setq default-tab-width 4)
 
+(scroll-bar-mode -1)
+
 (setq projectile-enable-caching t)
 
 (setq uniquify-buffer-name-style 'post-forward
