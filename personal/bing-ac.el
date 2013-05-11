@@ -13,10 +13,12 @@
 
 (ac-set-trigger-key "TAB")
 
+(setq ac-use-menu-map t)
 (define-key ac-menu-map "\C-n" 'ac-next)
 (define-key ac-menu-map "\C-p" 'ac-previous)
 
 (require 'auto-complete-clang)
 (global-set-key (kbd "C-`") 'ac-complete-clang)
+(setq ac-quick-help-delay 0.3)
 
 ;;; bing-ac.el ends here

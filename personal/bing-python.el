@@ -6,7 +6,7 @@
 
 (prelude-ensure-module-deps '(jedi))
 
-(require 'jedi)
+(setq jedi:setup-keys t)
 (add-hook 'python-mode-hook 'jedi:setup)
 
 ;;; bing-python.el ends here
