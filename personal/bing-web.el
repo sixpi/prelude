@@ -1,7 +1,9 @@
 ;;; bing-web.el --- My configurations for web development modes
 
 ;;; Code:
-(prelude-ensure-module-deps '(php-mode apache-mode web-mode))
+(prelude-ensure-module-deps '(php-mode apache-mode web-mode rinari))
+
+(require 'rinari)
 
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
