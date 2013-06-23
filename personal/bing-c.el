@@ -12,6 +12,7 @@
 (add-hook 'c-mode-common-hook 'bing/c-mode-common-hook)
 
 (defun bing/linux-mode-hook ()
+  (interactive)
   (c-set-style "linux")
   (setq indent-tabs-mode t)
   (setq tab-width 8)
