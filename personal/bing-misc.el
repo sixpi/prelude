@@ -33,4 +33,7 @@
 ;; Disable visualization of empty lines at beginning and end of document.
 (setq whitespace-style '(face tabs trailing lines-tail))
 
+;; Disable guru-mode; arrow keys are useful sometimes
+(setq prelude-guru nil)
+
 ;;; bing-misc.el ends here
