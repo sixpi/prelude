@@ -18,4 +18,8 @@
   (setq tab-width 8)
   (setq c-basic-offset 8))
 
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (local-set-key (kbd "C-c C-t") 'ff-find-other-file)))
+
 ;;; bing-c.el ends here

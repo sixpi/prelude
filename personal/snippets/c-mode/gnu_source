@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: gnu source
+# key: gnus_
+# --
+#ifndef _GNU_SOURCE
+#define _GNU_SOURCE
+#endif

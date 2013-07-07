@@ -17,7 +17,8 @@
 (add-to-list 'auto-mode-alist '("\\.blade\\.php$" . web-mode))
 
 (setq web-mode-engines-alist
-      '(("blade"  . "\\.blade\\.php$")))
+      '(("blade"  . "\\.blade\\.php$")
+        ("jinja2"  . "\\.html$")))
 
 (defun bing/web-mode-hook ()
   "Hook for web-mode"
