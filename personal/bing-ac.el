@@ -1,7 +1,7 @@
 ;;; bing-ac.el --- My configurations for auto-complete
 
 ;;; Code:
-(prelude-ensure-module-deps '(auto-complete auto-complete-clang))
+(prelude-ensure-module-deps '(yasnippet auto-complete auto-complete-clang))
 
 ;; Make sure yasnippet is present
 (require 'yasnippet)
