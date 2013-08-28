@@ -18,6 +18,8 @@ savefile/
 /prelude-modules.el
 projectile-bookmarks.eld
 session.*
+.cask
+
 tramp
 /ac-comphist.dat
 .sass-cache
