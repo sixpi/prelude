@@ -36,4 +36,13 @@
 ;; Disable guru-mode; arrow keys are useful sometimes
 (setq prelude-guru nil)
 
+(setq package-archives
+      (cons package-archives
+            '(("SC" . "http://joseito.republika.pl/sunrise-commander/"))))
+
+(setq package-archives
+      '(("gnu" . "http://elpa.gnu.org/packages/")
+         ("melpa" . "http://melpa.milkbox.net/packages/")
+         ("SC" . "http://joseito.republika.pl/sunrise-commander/")))
+
 ;;; bing-misc.el ends here
