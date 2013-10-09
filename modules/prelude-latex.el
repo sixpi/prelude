@@ -33,6 +33,7 @@
 ;;; Code:
 
 (prelude-ensure-module-deps '(auctex))
+(require 'latex)
 (require 'smartparens-latex)
 
 ;; AUCTeX configuration
