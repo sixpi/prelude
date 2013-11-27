@@ -53,6 +53,9 @@
                              (string-match
                               (expand-file-name "~/codebase/bb/bu-structure/libgrid")
                               filename)
+                             (string-match
+                              (expand-file-name "~/codebase/bb/bu-structure/libmol2")
+                              filename)
                              ))
                 (setq indent-tabs-mode t)
                 (setq tab-width 8)
