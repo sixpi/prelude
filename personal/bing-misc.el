@@ -45,4 +45,7 @@
          ("melpa" . "http://melpa.milkbox.net/packages/")
          ("SC" . "http://joseito.republika.pl/sunrise-commander/")))
 
+;; Ensure bash for tramp, zsh causes problems
+(eval-after-load 'tramp '(setenv "SHELL" "/bin/bash"))
+
 ;;; bing-misc.el ends here
