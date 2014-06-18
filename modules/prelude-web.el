@@ -53,7 +53,7 @@
        (setq web-mode-css-indent-offset 2)
        (setq web-mode-code-indent-offset 2)
        (setq web-mode-disable-autocompletion t)
-       (local-set-key (kbd "RET") 'newline-and-indent))
+       (local-set-key (kbd "RET") 'newline-and-indent)
      ;; make web-mode play nice with smartparens
        (setq web-mode-enable-auto-pairing nil)
        (sp-with-modes '(web-mode)
