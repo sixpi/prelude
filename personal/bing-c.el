@@ -2,6 +2,8 @@
 
 ;;; Code:
 
+(setq-default flycheck-clang-include-path '("~/include"))
+
 (defun c-lineup-arglist-tabs-only (ignored)
   "Line up argument lists by tabs, not spaces"
   (let* ((anchor (c-langelem-pos c-syntactic-element))
@@ -15,17 +17,23 @@
           (lambda ()
             (local-set-key (kbd "C-c C-t") 'ff-find-other-file)
             (local-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
+
             (c-add-style
              "linux-tabs-only"
              '("linux" (c-offsets-alist
                         (arglist-cont-nonempty
                          c-lineup-gcc-asm-reg
                          c-lineup-arglist-tabs-only))))
+
             (c-add-style
              "bsd-2-sp"
              '("bsd" (c-basic-offset . 2)))
-            (setq-default c-default-style "bsd-2-sp")
-            (setq-default c-basic-offset 2)
+
+            (c-add-style
+             "bsd-4-sp"
+             '("bsd" (c-basic-offset . 4)))
+
+            (setq-default c-default-style "bsd-4-sp")
             (setq-default indent-tabs-mode nil)))
 
 (defun bing/c-linux-mode ()
@@ -48,13 +56,19 @@
               ;; Enable kernel mode for the appropriate files
               (when (and filename
                          (or (string-match
-                              (expand-file-name "~/codebase/bb/bu-structure/libmol")
+                              (expand-file-name "~/src/bb/bu-structure/libmol")
                               filename)
                              (string-match
-                              (expand-file-name "~/codebase/bb/bu-structure/libgrid")
+                              (expand-file-name "~/src/bb/bu-structure/libgrid")
                               filename)
                              (string-match
-                              (expand-file-name "~/codebase/bb/bu-structure/libmol2")
+                              (expand-file-name "~/src/bb/bu-structure/libmol2")
+                              filename)
+                             (string-match
+                              (expand-file-name "~/src/bb/bu-structure/libgrid2")
+                              filename)
+                             (string-match
+                              (expand-file-name "~/src/bb/bu-structure/piper")
                               filename)
                              ))
                 (setq indent-tabs-mode t)
