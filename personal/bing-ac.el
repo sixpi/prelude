@@ -28,7 +28,7 @@
       (mapcar (lambda (item) (concat "-I" item))
               (split-string
                "
- /home/bing/include
+ ~/include
  .
  /usr/lib/gcc/x86_64-linux-gnu/4.7/include
  /usr/local/include
