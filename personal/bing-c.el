@@ -44,8 +44,7 @@
 
 (defun bing/c-mode-default ()
   (interactive)
-  (setq c-default-style "bsd-2-sp")
-  (setq c-basic-offset 2)
+  (setq c-default-style "bsd-4-sp")
   (setq indent-tabs-mode nil))
 
 (add-hook 'c-mode-hook 'bing/c-mode-default)
