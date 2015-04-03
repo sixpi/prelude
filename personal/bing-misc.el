@@ -8,17 +8,14 @@
 
 ;;; Code:
 (custom-set-faces
- '(default ((t (:family "Envy Code R" :foundry "unknown" :slant normal :weight normal :height 98 :width normal)))))
+ '(default ((t (:family "DejaVu Sans Mono" :foundry "unknown" :slant normal :weight normal :height 98 :width normal)))))
 (custom-set-variables
- '(transient-mark-mode nil)
  '(standard-indent 2)
  '(column-number-mode t))
 (global-linum-mode 1)
-(setq default-tab-width 4)
+(setq tab-width 4)
 
 (scroll-bar-mode -1)
-
-(setq projectile-enable-caching t)
 
 (setq uniquify-buffer-name-style 'post-forward
       uniquify-separator ":")
@@ -30,20 +27,33 @@
  kept-old-versions 5
  version-control t) ; versioned backups
 
+(defun push-mark-no-activate ()
+  "Pushes `point' to `mark-ring' and does not activate the region.
+Equivalent to \\[set-mark-command] when \\[transient-mark-mode] is disabled]"
+  (interactive)
+  (push-mark (point) t nil)
+  (message "Pushed mark to ring"))
+
+(global-set-key (kbd "C-'") 'push-mark-no-activate)
+
+(defun jump-to-mark ()
+  "Jump to the local mark, respecting `mark-ring' order."
+  (interactive)
+  (set-mark-command 1))
+
+(global-set-key (kbd "C-;") 'jump-to-mark)
+
 ;; Disable visualization of empty lines at beginning and end of document.
-(setq whitespace-style '(face tabs trailing lines-tail))
+(setq whitespace-style '(face tabs tab-mark trailing lines-tail))
 
 ;; Disable guru-mode; arrow keys are useful sometimes
 (setq prelude-guru nil)
 
 (setq package-archives
-      (cons package-archives
-            '(("SC" . "http://joseito.republika.pl/sunrise-commander/"))))
-
-(setq package-archives
-      '(("gnu" . "http://elpa.gnu.org/packages/")
-         ("melpa" . "http://melpa.milkbox.net/packages/")
-         ("SC" . "http://joseito.republika.pl/sunrise-commander/")))
+      (append package-archives
+              '(("gnu" . "http://elpa.gnu.org/packages/")
+                ("melpa" . "http://melpa.milkbox.net/packages/")
+                ("SC" . "http://joseito.republika.pl/sunrise-commander/"))))
 
 ;; Ensure bash for tramp, zsh causes problems
 (eval-after-load 'tramp '(setenv "SHELL" "/bin/bash"))
