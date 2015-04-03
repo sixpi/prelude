@@ -40,7 +40,7 @@
   (interactive)
   (setq indent-tabs-mode t)
   (setq tab-width 8)
-  (c-set-style "linux-tabs-only"))
+  (c-set-style "linux"))
 
 (defun bing/c-mode-default ()
   (interactive)
@@ -55,23 +55,23 @@
               ;; Enable kernel mode for the appropriate files
               (when (and filename
                          (or (string-match
-                              (expand-file-name "~/src/bb/bu-structure/libmol")
+                              (expand-file-name "~/src/bb/libmol")
                               filename)
                              (string-match
-                              (expand-file-name "~/src/bb/bu-structure/libgrid")
+                              (expand-file-name "~/src/bb/libgrid")
                               filename)
                              (string-match
-                              (expand-file-name "~/src/bb/bu-structure/libmol2")
+                              (expand-file-name "~/src/bb/libmol2")
                               filename)
                              (string-match
-                              (expand-file-name "~/src/bb/bu-structure/libgrid2")
+                              (expand-file-name "~/src/bb/libgrid2")
                               filename)
                              (string-match
-                              (expand-file-name "~/src/bb/bu-structure/piper")
+                              (expand-file-name "~/src/bb/piper")
                               filename)
                              ))
                 (setq indent-tabs-mode t)
                 (setq tab-width 8)
-                (c-set-style "linux-tabs-only")))))
+                (c-set-style "linux")))))
 
 ;;; bing-c.el ends here
