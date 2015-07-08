@@ -52,10 +52,11 @@ Equivalent to \\[set-mark-command] when \\[transient-mark-mode] is disabled]"
 (setq package-archives
       (append package-archives
               '(("gnu" . "http://elpa.gnu.org/packages/")
-                ("melpa" . "http://melpa.milkbox.net/packages/")
-                ("SC" . "http://joseito.republika.pl/sunrise-commander/"))))
+                ("melpa" . "http://melpa.milkbox.net/packages/"))))
 
 ;; Ensure bash for tramp, zsh causes problems
 (eval-after-load 'tramp '(setenv "SHELL" "/bin/bash"))
+
+(setq magit-last-seen-setup-instructions "1.4.0")
 
 ;;; bing-misc.el ends here

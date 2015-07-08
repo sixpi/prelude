@@ -1,11 +1,7 @@
 ;;; bing-ac.el --- My configurations for auto-complete
 
 ;;; Code:
-(prelude-ensure-module-deps '(yasnippet auto-complete auto-complete-clang))
-
-;; Make sure yasnippet is present
-(require 'yasnippet)
-(yas-global-mode 1)
+(prelude-ensure-module-deps '(auto-complete auto-complete-clang))
 
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
@@ -30,14 +26,14 @@
                "
  ~/include
  .
- /usr/lib/gcc/x86_64-linux-gnu/4.7/include
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include
  /usr/local/include
- /usr/lib/gcc/x86_64-linux-gnu/4.7/include-fixed
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed
  /usr/include/x86_64-linux-gnu
  /usr/include
- /usr/include/c++/4.7
- /usr/include/x86_64-linux-gnu/c++/4.7/.
- /usr/include/c++/4.7/backward
+ /usr/include/c++/4.8
+ /usr/include/x86_64-linux-gnu/c++/4.8/.
+ /usr/include/c++/4.8/backward
 "
                )))
 (bing/ac-clang-config)

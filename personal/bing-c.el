@@ -42,36 +42,30 @@
   (setq tab-width 8)
   (c-set-style "linux"))
 
-(defun bing/c-mode-default ()
-  (interactive)
-  (setq c-default-style "bsd-4-sp")
-  (setq indent-tabs-mode nil))
-
-(add-hook 'c-mode-hook 'bing/c-mode-default)
+(setq c-default-style "bsd-4-sp")
+(setq indent-tabs-mode nil)
 
 (add-hook 'c-mode-hook
           (lambda ()
             (let ((filename (buffer-file-name)))
               ;; Enable kernel mode for the appropriate files
               (when (and filename
-                         (or (string-match
-                              (expand-file-name "~/src/bb/libmol")
-                              filename)
-                             (string-match
-                              (expand-file-name "~/src/bb/libgrid")
-                              filename)
-                             (string-match
-                              (expand-file-name "~/src/bb/libmol2")
-                              filename)
-                             (string-match
-                              (expand-file-name "~/src/bb/libgrid2")
-                              filename)
-                             (string-match
-                              (expand-file-name "~/src/bb/piper")
-                              filename)
-                             ))
-                (setq indent-tabs-mode t)
-                (setq tab-width 8)
-                (c-set-style "linux")))))
+                       (or (string-match
+                            (expand-file-name "~/src/bb/libmol")
+                            filename)
+                           (string-match
+                            (expand-file-name "~/src/bb/libgrid")
+                            filename)
+                           (string-match
+                            (expand-file-name "~/src/bb/libmol2")
+                            filename)
+                           (string-match
+                            (expand-file-name "~/src/bb/libgrid2")
+                            filename)
+                           (string-match
+                            (expand-file-name "~/src/bb/piper")
+                            filename)
+                           ))
+                  (bing/c-linux-mode)))))
 
 ;;; bing-c.el ends here
